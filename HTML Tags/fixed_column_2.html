@@ -1,0 +1,157 @@
+<!-- Fixed column width using td tag -->
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>HTML td tag with equal width column</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                font-family: "Open Sans", sans-serif;
+                line-height: 1.25;
+            }
+            table{
+                border: 1px solid#ccc;
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100%;
+            }
+            table caption{
+                font-size: 1.5em;
+                margin: .5em 0.75em;
+            }
+            table tr{
+                border: 1px solid #ddd;
+                padding: .35em;
+            }
+            table tr:nth-child(even){
+                background: #f8f8f8;
+            }
+            table th{
+                padding: .625em;
+                text-align: left;
+            }
+            table td{
+                padding: .625em;
+                text-align: left;
+            }
+            table th{
+                background: #999;
+                color: #fff;
+                font-size: 1.85em;
+                letter-spacing: .1em;
+                text-transform: uppercase;
+            }
+            table td{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            @import url(https://fonts.googleapis.com/css?family=Bangers);
+            body{
+                text-transform: uppercase;
+                text-align: center;
+                white-space: nowrap;
+                color: #fff;
+                background-color: #E1332D;
+            }
+            h2{
+                text-align: center;
+                font-weight: normal;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1em;
+                white-space: nowrap;
+                font-size: 3vw;
+                z-index: 1000;
+                font-family: 'Bangers',cursive;
+                text-shadow: 5px 5px 0 rgba(0,0,0,0.7);
+                @include skew(0, -6.7deg, false);
+                @include transition-property(font-size);
+                @include transition-duration(0.5s);
+            }
+            thead{
+                border-top: 1px solid #ccc;
+                padding: 10px;
+                width: 120px;
+                background-color: #004496;
+                color: #fff;
+                font-family: arial;
+                font-size: 12px;
+            }
+            td{
+                border-top: 1px solid #ccc;
+                padding: 10px;
+                width: 120px;
+                background-color: #004496;
+                color: #fff;
+                font-family: arial;
+                font-size: 12px;
+            }
+            th{
+                border-top: 1px solid #ccc;
+                padding: 10px;
+                width: 120px;
+                background-color: #004496;
+                color: #fff;
+                font-family: arial;
+                font-size: 18px;
+            }
+            h3{
+                text-align: center;
+                font-weight: normal;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 1em;
+                white-space: nowrap;
+                font-size: 2vw;
+                z-index: 1000;
+                font-family: 'Bangers',cursive;
+                text-shadow: 5px 5px 0 rgba(0,0,0,0.7);
+                @include skew(0, -6.7deg,false);
+                @include transition-property(font-size);
+                @include transition-duration(0.5s);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Fixed Column td tag</h2>
+        <h3>Equal Sized column width using td tag</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: red">1</td>
+                    <td>Books</td>
+                    <td>5</td>
+                    <td>589</td>
+                </tr>
+                <tr>
+                    <td style="color: red">2</td>
+                    <td>T-Shirt</td>
+                    <td>5</td>
+                    <td>3500</td>
+                </tr>
+                <tr>
+                    <td style="color: red">3</td>
+                    <td>Jeans</td>
+                    <td>2</td>
+                    <td>5000</td>
+                </tr>
+                <td style="color: red">4</td>
+                <td>Suits</td>
+                <td>3</td>
+                <td>6000</td>
+            </tbody>
+        </table>
+    </body>
+</html>
