@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rowspan</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Table with rowspan</h1>
+        <p>if you want to make a cell span more than one row, you can use the rowspan attribute.
+            <br>It will divide a cell into multiple rows. The number of divided rows will depend on rowspan values.
+        </p>
+        
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>Ajeet Maurya</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Mobile No.</th>
+                <td>7867679898</td>
+            </tr>
+            <tr><td>8977578907</td></tr>
+        </table>
+    </body>
+</html>
