@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>video tag</title>
+        <style>
+            table{
+                border-collapse: collapse;
+                background-color: aliceblue;
+                border-color: black;
+            }
+            th, th{
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+        <body>
+            <h2>Example to play html video tag mp4 file</h2>
+            <video controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the html video tag.
+            </video>
+            <br>
+            <h2>Example to play ogg file using html video tag.</h2>
+            <video controls="controls" poster="C:\Users\misal\OneDrive\Pictures\Images\car.png" height="200" width="300">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the html video tag (ogg file).
+            </video>
+            <br>
+            <h2>example of video tag in html where are using height, width, autoplay, controls and loop attributes</h2>
+            <video id="myVideo" width="320" height="240" controls autoplay loop>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the html video tag.
+            </video>
+            <br>
+            <h2>Attributes of the HTML video tag</h2>
+            <table border="1">
+                <tr>
+                    <th>Attributes</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Controls</td>
+                    <td>It defines the video controls which is displayed with play/pause buttons.</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>It is used to set the height of the video player</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>It is used to set the width of the video player</td>
+                </tr>
+                <tr>
+                    <td>poster</td>
+                    <td>It specifies the image which is displayed on the screen when the video is not played</td>
+                </tr>
+                <tr>
+                    <td>autoplay</td>
+                    <td>It specifies that the video will start playing as soon as it is ready</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td>It specifies that the video file will start over again, every time when it is completed</td>
+                </tr>
+                <tr>
+                    <td>muted</td>
+                    <td>It is used to mute the video output</td>
+                </tr>
+                <tr>
+                    <td>preload</td>
+                    <td>It specifies the author view to upload video file when the page loads</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>It specifies the source URL of the video file</td>
+                </tr>
+            </table>
+        </body>
+</html>
