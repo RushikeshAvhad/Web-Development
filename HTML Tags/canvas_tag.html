@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML canvas</title>
+    </head>
+    <body>
+        <h2>HTML Canvas tag</h2>
+        <canvas id="myCanvas1" width="300" height="100" style="border: 2px solid;">
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <br>
+
+        <h2>HTML Canvas Tag with JavaScript</h2>
+        <canvas id="myCanvas2" width="250" height="150" style="border: 1px solid #c3c3c3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0,0,200,100);
+        </script>
+        <br>
+
+        <h2>Drawing line on canvas</h2>
+        <canvas id="myCanvasLine" width="200" height="100" style="border: 1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvasLine");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+        </script>
+        <br>
+
+        <h2>Drawing Circle on Canvas</h2>
+        <canvas id="myCanvasCircle" width="200" height="100" style="border: 1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvasCircle");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+        <br>
+
+        <h2>Drawing text on Canvas using fill text</h2>
+        <canvas id="myCanvasText1" width="300" height="100" style="border: 1px solid #d3d3d3;">
+            Sorry! Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvasText1");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello World!",10,50);
+        </script>
+        <br>
+
+        <h2>Drawing text on Canvas using StrokeText</h2>
+        <canvas id="myCanvasText2" width="300" height="100" style="border: 1px solid #d3d3d3;">
+            Sorry! Upgrade your browser. Your browser does not support HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvasText2");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World!",10,50);
+        </script>
+    </body>
+</html>
