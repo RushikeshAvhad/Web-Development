@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Tenplate Element Example</h1>
+        <p>To view the template element's concealed content, click the button below.</p>
+        <button onclick="showContent()">show content</button>
+
+        <template>
+            <h2>krishna</h2>
+            <img src="C:\Users\misal\OneDrive\Pictures\Wallpapers\krishna.jpg" width="240" height="180" />
+        </template>
+
+        <script>
+            function showContent(){
+                let temp = document.getElementsByTagName("template")[0];
+                let clon = temp.content.cloneNode(true);
+                document.body.appendChild(clon);
+            }
+        </script>
+    </body>
+</html>
