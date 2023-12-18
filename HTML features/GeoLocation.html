@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation API</title>
+        <style>
+            table{
+                border-collapse: collapse;
+            }
+            th{
+                background-color: aquamarine;
+            }
+            td{
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Find your current location</h1>
+        <button onclick="getlocation()">Click me</button>
+        <div id="location"></div>
+        <script>
+            var x = document.getElementById("location");
+            function getlocation()
+            {
+                if(navigator.getlocation)
+                {
+                    alert("your browser is supporting Geolocation API")
+                }
+                else
+                {
+                    alert("Sorry! your browser does not support Geolocation API")
+                }
+            }
+        </script>
+        <br>
+
+        <h2>Getting the user's current position</h2>
+        <button onclick="geolocation()">Click me!</button>
+        <div id="location"></div>
+        <script>
+            var x = document.getElementById("location");
+            function getlocation()
+            {
+                if(navigator.geolocation)
+                {
+                    navigator.geolocation.getCurrentPosition(showPosition)
+                }
+                else
+                {
+                    alert("Sorry! your browser is not supporting")
+                }
+            }
+            function showPosition(position)
+            {
+                var x = "Your current location is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";  
+                document.getElementById("location").innerHTML = x;
+            }
+        </script>
+        <br>
+
+        <h2>Location Properties</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Properties</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>coords.latitude</td>
+                    <td>It returns latitude of the user location as a decimal number.</td>
+                </tr>
+                <tr>
+                    <td>coodrs.langitude</td>
+                    <td>It returns longitude of user location as a decimal</td>
+                </tr>
+                <tr>
+                    <td>coords.altitude</td>
+                    <td>It returns altitude in meters above the sea level(Only if available)</td>
+                </tr>
+                <tr>
+                    <td>coords.acuracy</td>
+                    <td>It return the accuracy of usre's position</td>
+                </tr>
+                <tr>
+                    <td>coords.altitudeAccuracy</td>
+                    <td>It returns the altitude accuracy of users location(If available)</td>
+                </tr>
+                <tr>
+                    <td>coords.heading</td>
+                    <td>It returns headings as degree clockwise from North (If available)</td>
+                </tr>
+                <tr>
+                    <td>coords.speed</td>
+                    <td>It returns the speed in meter per seconds (If available)</td>
+                </tr>
+                <tr>
+                    <td>timestamp</td>
+                    <td>It returns data or time of response (if available)</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
