@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Storage</title>
+        <style>
+            body{
+                color: green;
+                text-align: center;
+                font-size: 30px;
+                margin-top: 30px;
+                font-style: italic;
+            }
+            div{
+                background-color: pink;
+                height: 50px;
+                border-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Check if browser supports the web storage or not?</h1>
+        <div id="result"></div>
+        <script>
+            if(typeof(Storage)!=="undefined")
+            {
+                document.getElementById("result").innerHTML = "Hey,Your browser supports the web storage.";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML = "Sorry!your browser does not supports web storage.";
+            }
+        </script>
+        <br>
+        
+        <h2>The localStorage object</h2>
+        <script>
+            if(typeof(Storage)!=="undefined") 
+            {
+                localStorage.setItem("name","RK");
+                localStorage.setItem("Country", "India");
+                document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country);
+            }
+            else
+            {
+                alert("Sorry! your browser is not supporting the browser")  
+            }  
+        </script>
+        <br>
+
+        <h2>Example of counter using local storage.</h2>
+        <button onclick="counter();">click me</button>
+        <div id="output">See the result here:</div>
+        <script type="text/javascript">
+            function counter()
+            {
+                if(localStorage.hits)
+                {
+                    localStorage.hits=Number(localStorage.hits)+1;
+                }
+                else
+                {
+                    localStorage.hits=1;
+                }
+                document.getElementById('output').innerHTML = "You have clicked counter button for"+""+ localStorage.hits +""+ "times";
+            }
+        </script>
+        <p>click the counter button to see the total counts.</p>
+        <p>If you will close the browser still it will not reset.</p>
+        <br>
+
+        <h2>Example of counter using session storage</h2>
+        <button onclick="sessionCounter();">Click me</button>
+        <div id="sessionOutput">See the result here:</div>
+        <script type="text/javascript">
+            function sessionCounter()
+            {
+                if(sessionStorage.hits)
+                {
+                    sessionStorage.hits=Number(sessionStorage.hits)+1;
+                }
+                else
+                {
+                    sessionStorage.hits=1;
+                }
+                document.getElementById('sessionOutput').innerHTML="You have clicked counter button for"+""+sessionStorage.hits+""+ "times";
+            }
+        </script>
+        <p>Click the counter button to see the total counts.</p>
+        <p>Now, if you close the browser then it will reset to initial value.</p>
+        <br>
+
+        <h2>Remove web storage</h2>
+        <button onclick="remove();">Remove item</button>
+        <div id="removeStorageOutput"></div>
+        <script>
+            if(typeof(Storage)!=="undefined")
+            {
+                localStorage.setItem("name","RK");
+                localStorage.setItem("Country","India");
+                document.getElementById("removeStorageOutput").innerHTML= "Hii, My name is" + " " + localStorage.name + "" + " and i belongs to " + localStorage.Country;
+            }
+            else
+            {
+                alert("Sorry! your browser is not supporting the browser")
+            }
+            function remove()
+            {
+                localStorage.removeItem("name");
+                document.getElementById("removeStorageOutput").innerHTML = "Hii, my name is" + " " + localStorage.name + "" + " and i belongs to " + localStorage.Country;
+            }
+        </script>
+    </body>
+</html>
