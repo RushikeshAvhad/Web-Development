@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Worker API</title>
+    </head>
+    <body>
+        <h2>Example to check the browser support of web workers</h2>
+        <div id="supported"></div>
+        <div id="unsupported"></div>
+        <button onclick="worker();">Click me</button>
+        <script type="text/javascript">
+            function worker()
+            {
+                if(typeof(Worker)!=="undefined")
+                {
+                    document.getElementById("supported").innerHTML="Supporting the browser.";
+                }
+                else
+                {
+                    document.getElementById("unsupported").innerHTML="Not supporting.";
+                }
+            }
+        </script>
+        <br>
+
+        <div class="div1">
+            <h2>Example of web worker</h2>
+            <label>Enter the number to find the square</label>
+            <br>
+            <input type="text" name="num" id="num">
+            <br>
+            <br>
+            <button id="submit">Submit</button>
+            <button id="other">Wait</button>
+            <div id="text"></div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("other").onclick=function(){
+                alert("Hey! Web worker is working, and you can wait for the result.");
+            }
+            
+            //Web Worker code
+            var worker = new Worker("worker.js");
+            worker.onmessage = function(event)
+            {
+                document.getElementById("text").innerHTML = event.data;
+            }
+            document.getElementById("submit").onclick=function()
+            {
+                var num = document.getElementById("num").value;
+                worker.postMessage(num);
+            }
+        </script>
+        <p>
+            <b>Note:Try to enter a big number,and then click on other button. the page will respond properly</b>
+        </p>
+    </body>
+</html>
