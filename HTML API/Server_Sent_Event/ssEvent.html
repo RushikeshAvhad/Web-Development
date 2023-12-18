@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 SSE API</title>
+        <style type="text/css">
+            div{
+                text-align: center;
+                background-color: #98f5ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script type="text/javascript">
+            if(typeof(EventSource)!=="undefined"){
+                alert("Hey! Your browser is supporting.");
+            }
+            else{
+                alert("Sorry! Your browser is not supporting.");
+            }
+        </script>
+        <br>
+        <h1 align="center">Dynamic Server Updates</h1>
+        <div id="output"></div>
+        <script>
+            if(typeof(EventSource)!=="undefined"){
+                var source = new EventSource("ServerUpdate.php");
+                source.onmessage = function(event){
+                    document.getElementById("output").innerHTML += event.data + "<br>";
+                }
+            }else{
+                alert("Sorry, your browser does not support the server sent updates");
+            }
+        </script>
+    </body>
+</html>
