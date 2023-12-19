@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Form</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                border-color: black;
+            }
+            thead{
+                background-color: aqua;
+            }
+            tbody{
+                background-color: aquamarine;
+            }
+            h2{
+                background-color: burlywood;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>HTML Form</h2>
+        <p>An <strong>HTML Form</strong> is <i>section of document</i> which contains controls such as text fields, password fields, checkboxes, radio buttons, submit button, menus etc.</p>
+        <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>form</td>
+                    <td>It defines an HTML form to enter inputs by the used side.</td>
+                </tr>
+                <tr>
+                    <td>input</td>
+                    <td>It defines an input control.</td>
+                </tr>
+                <tr>
+                    <td>textarea</td>
+                    <td>It defines a multi-line input control</td>
+                </tr>
+                <tr>
+                    <td>label</td>
+                    <td>It defines a label for an input element.</td>
+                </tr>
+                <tr>
+                    <td>fieldset</td>
+                    <td>It groups the related element in a form.</td>
+                </tr>
+                <tr>
+                    <td>legend</td>
+                    <td>It defines a caption for a fieldset element.</td>
+                </tr>
+                <tr>
+                    <td>select</td>
+                    <td>It defines a drop-down list.</td>
+                </tr>
+                <tr>
+                    <td>optgroup</td>
+                    <td>It defines a group of related options in a drop-down list.</td>
+                </tr>
+                <tr>
+                    <td>option</td>
+                    <td>It defines an option in a drop-down list.</td>
+                </tr>
+                <tr>
+                    <td>button</td>
+                    <td>It defines a clickable button.</td>
+                </tr>
+                <tr>
+                    <td>datalist</td>
+                    <td>It specifies a list of pre-defined options for input control.</td>
+                </tr>
+                <tr>
+                    <td>keygen</td>
+                    <td>It defines a key-pair generator field for forms.</td>
+                </tr>
+                <tr>
+                    <td>output</td>
+                    <td>It defines the result of a calculation.</td>
+                </tr>
+            </tbody>  
+        </table>
+
+        <h2>HTML Input Element example</h2>
+        <form>
+            Enter your name 
+            <br>
+            <input type="text" name="username">
+        </form>
+        <h2>HTML TextField Control</h2>
+        <p>The type="text" attribute of input tag creates textfield control also known as single line textfield control.
+        <br>The name attribute is optional, but it is required for the server side component such as JSP, ASP, PHP etc.</p>
+        <form>
+            First Name: <input type="text" name="firstName"><br/>
+            Last Name: <input type="text" name="lastName"><br/>
+        </form>
+
+        <h2>HTML textarea tag in form</h2>
+        <p>The textarea tag in html is used to insert multiple-line text in a form.
+            <br>The size of textarea can be specify either using "rows" or "cols" attribute or by css.</p>
+        <form>
+            Enter your address:<br>
+            <textarea name="firstText" id="textArea1" cols="20" rows="2"></textarea>
+        </form>
+
+        <h2>Label tag in Form</h2>
+        <p>If you click on the label tag, it will focus on the text control. 
+            <br>To do so, you need to have for attribute in label tag that must be same as id attribute of input tag.</p>
+        <form>
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname"><br>
+            <label for="lastname">Last Name</label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+        </form>
+
+        <h2>HTML Password Field Control</h2>
+        <p>The Password is not visible to the user in password field control</p>
+        <form>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"><br>
+        </form>
+
+        <h2>HTML5 Email Field Control</h2>
+        <p>It validates the text for correct email address. You must use @ and . in this field.</p>
+        <form>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"><br>
+        </form>
+
+        <h2>Radio Button Control</h2>
+        <p>The radio button is used to select one option from multiple options.</p>
+        <form>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="male"/>Male
+            <input type="radio" name="gender" id="gender" value="female">Female <br>
+        </form>
+
+        <h2>Checkbox Control</h2>
+        <p>The Checkbox control is used to check multiple options from given checkboxes.</p>
+        <form>
+            Hobby: <br>
+            <input type="checkbox" id="cricket" name="cricket" value="cricket">
+            <label for="cricket">Cricket</label> <br>
+            <input type="checkbox" name="football" id="football" value="football">
+            <label for="football">Football</label> <br>
+            <input type="checkbox" id="hockey" name="hockey" value="hockey">
+            <label for="hockey">Hockey</label>
+        </form>
+        <p>These are similar to radio button except it can choose multiple options
+            at a time and radio button can select one button at a time, and its display.
+        </p>
+        <br>
+
+        <h2>Submit Button Control</h2>
+        <p>HTML <strong>input type = "submit"</strong> are used to add a submit button on web page.
+        <br>When user clicks on submit button, then form get submit to the server.</p>
+        <form>
+            <label for="name">Enter name</label> <br>
+            <input type="text" id="name" name="name"> <br>
+            <label for="pass">Enter Password</label> <br>
+            <input type="password" id="pass" name="pass"> <br>
+            <input type="submit" value="submit">
+        </form>
+        <br>
+
+        <h2>HTML fieldset element:</h2>
+        <p><strong>The fieldset element</strong> in HTML is used to group the related information of a form.
+            <br>This element is used with <strong>legend</strong> element which provide caption for the grouped elements.
+        </p>
+        <form>
+            <fieldset>
+                <legend>User Information:</legend>
+                <label for="nameFieldset">Enter name</label>
+                <input type="text" id="nameFieldset" name="nameFieldset"> <br>
+                <label for="passFieldset">Enter Password</label>
+                <input type="password" id="passFieldset" name="passFieldset"> <br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
