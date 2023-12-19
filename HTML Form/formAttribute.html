@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Form Attribute</title></head>
+    <body>
+        <h1>Form Attribute</h1>
+        <br>
+        <h2>HTML action attribute</h2>
+        <form action="action.html" method="post">
+            <label for="name">User Name:</label> <br>
+            <input type="text" name="name" id="name"> <br>
+            <br>
+            <label for="pass">User Password:</label> <br>
+            <input type="password" name="pass" id="pass"> <br> <br>
+            <input type="submit">
+            <p>it will redirect to a new page when you click on submit button</p>
+        </form>
+        <br>
+
+        <h2>HTML Method Attribute</h2>
+        <p>The <strong>method</strong> attribute defines the HTTP method which browser used to submit the form.
+        <br>
+        <dl>
+            <dt><strong>post</strong></dt>
+            <dd>-We can use the post value of method attribute when we want to process the sensitive data as it does not display the submitted data in url.</dd>
+            <dt><strong>get</strong></dt>
+            <dd>-The get value of method attribute is default value while submitting the form. But this is not secure as it displays data in URL after submmiting the form.</dd>
+        </dl>
+        </p>
+        <form action="action.html" method="post">
+            <label for="lblname">User Name:</label> <br>
+            <input type="text" name="lblname" id="lblname"> <br>
+            <label for="lblpass">User Password:</label> <br>
+            <input type="password" name="lblpass" id="lblpass"> <br>
+            <input type="submit">
+        </form>
+        <br>
+
+        <h2>HTML Target Attribute</h2>
+        <p>The target attribute defines where to open the response after submitting the form.
+            <br>The following are the keywords used with the target attribute.
+            <dl>
+                <dt><strong>_self</strong></dt>
+                <dd>-If we use _self as an attribute value, then the response will display in current page only.</dd>
+                <dt><strong>_blank</strong></dt>
+                <dd>If we use _blank as an attribute it will load the response in a new page</dd>
+            </dl>
+        </p>
+        <br>
+
+        <h2>HTML autocomplete attribute</h2>
+        <p>The HTML autocomplete attribute enables an input field to complete automatically.
+            <br>It can have two values <strong>"on"</strong> and <strong>"off"</strong> which enables autocomplete either ON or OFF.
+            <br>The default value of autocomplete attribute is on.
+            <br><strong>Note:</strong> It can be used with form element and input element both.
+        </p>
+        <br>
+
+        <h2>HTML enctype attribute</h2>
+        <p>The HTML enctype attribute defines the encoding type of form-content while submitting the form to the server.
+            <br>This attribute specifies how the browser should encode the form data before sending it to the server.
+            <br>The possible values of enctype can be:
+            <dl>
+                <dt><strong>application/x-www-form-urlencoded:</strong></dt>
+                <dd>-It is default encoding type if the enctype attribute is not included in the form.
+                    <br>All character are encoded before submitting the form.
+                </dd>
+                <dt><strong>multipart/form-data:</strong></dt>
+                <dd>-It does not encode any character.
+                    <br>It is used when our form contains file-upload controls.
+                </dd>
+                <dt><strong>text/plain:</strong></dt>
+                <dd>In this encoding type only space are encoded into + symbol and no any other special character encodede.</dd>
+            </dl>
+        </p>
+        <br>
+
+        <h2>HTML novalidate attribute</h2>
+        <p>If we apply this attribute in form then it does not perform any type of validation and submit the form</p>
+        <br>
+
+        <h2>HTML name attribute</h2>
+        <p>The HTML name attribute defines the name of an input element.
+            <br>The name and value attribute are included in HTTP request when we submit the form
+            <br><strong>Note:</strong> One should not omit the name attribute as when we submit the form the HTTP request includes both name-value pair and if name is not available it will not process that input field.
+        </p>
+        <form action="action.html" method="get">
+            <label for="lblnameid">Enter name:</label> <br>
+            <input type="name" name="uname" id="lblnameid"> <br>
+            Enter age: <br>
+            <input type="number" name="age"> <br>
+            Enter email: <br>
+            <input type="email"> <br>
+            <input type="submit" value="submit">
+        </form>
+        <p><strong>Note:</strong> If you will not use name attribute in any input field, then that input field will not be submitted, when submit the form</p>
+        <br>
+
+        <h2>HTML value attribute</h2>
+        <p>The HTML value attribute defines the initial value or default value of an input field.</p>
+        <form action="form.html"></form>
+        <label>Enter your Name:</label> <br>
+        <input type="text" name="usrname" value="Enter Name"> <br>
+        <label>Enter your Email-address</label> <br>
+        <input type="text" name="usrname" value="Enter email"> <br>
+        <label>Enter your password</label> <br>
+        <input type="password" name="passwordtext" value=""> <br>
+        <input type="submit" value="login">
+        <br>
+
+        <h2>HTML required attribute</h2>
+        <p>HTML required is a Boolean attribute which specifies that must fill that field before submitting the form.</p>
+        <form>
+            <label>Enter your email-address</label> <br>
+            <input type="text" name="uname" required> <br>
+            <label>Enter your password</label> <br>
+            <input type="password" name="pass"> <br>
+            <input type="submit" value="login">
+        </form>
+        <br>
+
+        <h2>HTML autofocus attribute</h2>
+        <p>The autofocus is a boolean attribute which enables a field automatically focused when a webpage loads.</p>
+        <form>
+            <label>Enter your Email-address</label> <br>
+            <input type="text" name="uname" autofocus> <br>
+            <label>Enter your password</label> <br>
+            <input type="password" name="pass"> <br>
+            <input type="submit" value="login">
+        </form>
+        <br>
+
+        <h2>HTML placeholder attribute</h2>
+        <p>The placeholder attribute specifies a text within an input field which informs the user about the expected input of that field.
+            <br>The placeholder attribute can be used with text, password, email, and URL values.
+        </p>
+        <form>
+            Enter your name <br>
+            <input type="text" name="uname" placeholder="Your Name"> <br>
+            Enter your email address<br>
+            <input type="email" name="email" placeholder="example@gmail.com"> <br>
+            Enter your password <br>
+            <input type="password" name="psw" placeholder="Your password"> <br><br>
+            <input type="submit" value="login">
+        </form>
+        <br>
+
+        <h2>HTML disabled attribute</h2>
+        <p>The HTML disabled attribute when applied then it disable that input field.
+            <br>The disabled field does not allow the user to interact with that field.
+        </p>
+        <form>
+            Enter your Name <br>
+            <input type="text" name="uname" placeholder="User" disabled> <br>
+            Enter your email address <br>
+            <input type="email" name="email" placeholder="example@gmail.com"> <br>
+            Enter your password <br>
+            <input type="password" name="pass" placeholder="your password"> <br>
+            <input type="submit" value="login">
+        </form>
+        <br>
+
+        <h2>HTML size attribute</h2>
+        <p>The size attribute controls the size of the input field in typed characters.</p>
+        <form>
+            <label>Account holder name</label> <br>
+            <input type="text" name="uname" size="40" required> <br>
+            <label>Bank account number</label> <br>
+            <input type="text" name="an" size="30" required> <br>
+            <label>CVV</label> <br>
+            <input type="text" name="cvv" size="1" required> <br>
+            <input type="submit" value="login">
+        </form>
+        <br>
+
+        <h2>HTML form attribute</h2>
+        <p>HTML form attribute allows a user to specify an input field outside the form but remains the part of the parent form.</p>
+        <form id="fcontrol">
+            <label for="formname">User Name:</label> <br>
+            <input type="text" name="formname" id="formname" required> <br>
+            User Password: <br>
+            <input type="password" name="formpass"> <br>
+        </form>
+        <p>The email field is outside the form but still it will remain part of the form</p>
+        User email: <br>
+        <input type="email" name="email" form="fcontrol" required><br>
+        <input type="submit" form="fcontrol">
+    </body>
+</html>
