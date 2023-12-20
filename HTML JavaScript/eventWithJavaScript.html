@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event with JavaScript</title>
+        <style>
+            table{
+                border-color: black;
+                border-collapse: collapse;
+            }
+            thead{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML events with JavaScript</h1>
+        <p>An event is something which user does, or bowser does such as mouse click or page loading are examples of events,
+            <br>and JavaScript comes in the role if we want something to happen on these events.
+            <br>HTML provides event handler attributes which work with JavaScript code and can perform some action on an event.
+        </p>
+        <br>
+        <h2>Click Event example</h2>
+        <p>Click on the button and you can see a pop-up window with a message</p>
+        <input type="button" value="click" onclick="alert('Hi, how are you!')">
+        <br>
+        <h3>HTML can have following events such as:</h3>
+        <ul>
+            <li><strong>Form events  : </strong> reset, submit, etc.</li>
+            <li><strong>Select events: </strong> text, field, text area, etc.</li>
+            <li><strong>Focus event  : </strong> focus, blur, etc.</li>
+            <li><strong>Mouse events : </strong> Select, mouseup, mousemove, mousedown, click, dblclick, etc</li>
+        </ul>
+        <br>
+        <h3>following are the list for window event attributes:</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Handler Name</th>
+                    <th>Occurs When</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>onBlur</td>
+                    <td>blur</td>
+                    <td>When form input loses focus</td>
+                </tr>
+                <tr>
+                    <td>onClick</td>
+                    <td>click</td>
+                    <td>When the user clicks on a form element or a link</td>
+                </tr>
+                <tr>
+                    <td>onSubmit</td>
+                    <td>submit</td>
+                    <td>When user submits a form to the server</td>
+                </tr>
+                <tr>
+                    <td>onLoad</td>
+                    <td>load</td>
+                    <td>When page loads in a browser</td>
+                </tr>
+                <tr>
+                    <td>onFocus</td>
+                    <td>focus</td>
+                    <td>When user focuses on an input field</td>
+                </tr>
+                <tr>
+                    <td>onSelect</td>
+                    <td>select</td>
+                    <td>When user selects the form input field</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
