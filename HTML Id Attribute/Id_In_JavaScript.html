@@ -2,6 +2,14 @@
 <html>
     <head>
         <title>Id in JavaScript</title>
+        <script>
+            function viewdate(){
+                var dateOfBirth = document.getElementById("dob").value;
+                document.getElementById("demo").innerHTML = dateOfBirth;
+                var nameLable = document.getElementById("name").value;
+                document.getElementById("namelbl").innerHTML = nameLable;
+            }
+        </script>
         <style>
             h2{
                 text-align: center;
@@ -24,15 +32,6 @@
         <br> <br>
         <h2 id="namelbl"></h2>
         <br>
-        <h2 id="demo"></h2>
-
-        <script>
-            function viewdate(){
-                var dateOfBirth = document.getElementById("dob").value;
-                document.getElementById("demo").innerHTML = dateOfBirth;
-                var nameLable = document.getElementById("name").value;
-                document.getElementById("namelbl").innerHTML = nameLable;
-            }
-        </script>
+        <h2 id="demo"></h2>       
     </body>
 </html>
