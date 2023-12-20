@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Id in JavaScript</title>
+        <style>
+            h2{
+                text-align: center;
+                font-style: italic;
+                font-size: 30px;
+                color: blue;
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <label>Employee Name:</label>
+        <input type="text" id="name" placeholder="Your Good Name">
+        <br>
+        <br>
+        <label>Date of Joining:</label>
+        <input type="date" id="dob">
+        <br> <br>
+        <button onclick="viewdate()">Submit</button>
+        <br> <br>
+        <h2 id="namelbl"></h2>
+        <br>
+        <h2 id="demo"></h2>
+
+        <script>
+            function viewdate(){
+                var dateOfBirth = document.getElementById("dob").value;
+                document.getElementById("demo").innerHTML = dateOfBirth;
+                var nameLable = document.getElementById("name").value;
+                document.getElementById("namelbl").innerHTML = nameLable;
+            }
+        </script>
+    </body>
+</html>
