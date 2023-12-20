@@ -17,5 +17,16 @@
         <h2>Custome Iframe border.</h2>
         <p>Change the size, color, style of the iframe's border</p>
         <iframe src="https://www.javatpoint.com" style="border: 2px solid tomato;"></iframe>
+        <br>
+
+        <h2>iframe target for a link</h2>
+        <p>You can set a target frame for a link by using iframe.
+            <br>Your specified target attribute of the link must refer to the name attribute of the iframe.
+        </p>
+        <iframe src="new.html" height="300px" width="100%" name="iframe_a"></iframe>
+        <p>
+            <a href="https://www.javatpoint.com" target="iframe_a">JavatPoint.com</a>
+        </p>
+        <p>The name of <strong>iframe</strong> and link target must have same value else link will not open as a frame.</p>
     </body>
 </html>
