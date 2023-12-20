@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Attribute</title>
+    </head>
+    <body>
+        <h1>Example of Changing HTML Attribute using JavaScript</h1>
+        <br>
+        <h2>Turn on / off light</h2>
+        <img id="myImage" src="https://jooinn.com/images/isolated-light-bulb-1.jpg" width="100" height="180" alt="image not available">
+        <p>
+            <button type="button" onclick="light(1)">Light On</button>
+            <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+        <br>
+        <br>
+        <h2>Check Photo</h2>
+        <img id="placesImage" src="" height="280" width="350"/>
+        <p>
+            <button type="button" onclick="place(3)">Kedarnath</button>
+            <button type="button" onclick="place(4)">Badrinath</button>
+            <button type="button" onclick="place(5)">Pashupatinath</button>
+            <button type="button" onclick="place(6)">Rameswaram</button>
+            <button type="button" onclick="place(7)">Jagannathpuri</button>
+        </p>
+
+        <script>
+            function light(state) {
+                var pic;
+                var lightoff = "https://jooinn.com/images/isolated-light-bulb-1.jpg";
+                var lighton = "https://th.bing.com/th/id/R.4599cbcc5b0587bb6a405fcda9095f11?rik=6x2sLQwz1IEGBA&riu=http%3a%2f%2fwww.billfrymire.com%2fgallery%2fweblarge%2fincandescent-lightbulb-glow.jpg&ehk=c3rX4SsY6n4R%2b63WRuZPofLlTBvtxJVbO5QcQkfp0Js%3d&risl=&pid=ImgRaw&r=0";
+                if (state == 0){
+                    pic = lightoff
+                }else{
+                    pic = lighton
+                }
+                document.getElementById('myImage').src = pic;
+            }
+            function place(plc){
+                var pic;
+                var kedarnathPic = "https://i.pinimg.com/originals/12/b3/f5/12b3f51d60f63bb566d5b2a5e9526f64.jpg";
+                var badrinathPic = "https://wallpapercave.com/wp/wp6881153.jpg";
+                var pashupatinathPic = "https://th.bing.com/th/id/OIP.sbPsWODp9TgUupde3hSnBAEsC4?rs=1&pid=ImgDetMain";
+                var rameswaramPic = "https://www.templepurohit.com/wp-content/uploads/2015/02/Ramanathaswamy-temple-Rameswaram-Tamil-nadu-e1481445517760.jpg";
+                var jagannathpuriPic = "https://www.templepurohit.com/wp-content/uploads/2015/11/Puri-Jagannath-Temple-Puri-Odisha.jpg";
+                if(plc == 3){
+                    pic = kedarnathPic;
+                }else if(plc == 4){
+                    pic = badrinathPic;
+                }else if(plc == 5){
+                    pic = pashupatinathPic;
+                }else if(plc == 6){
+                    pic = rameswaramPic;
+                }else if(plc == 7){
+                    pic = jagannathpuriPic;
+                }
+                document.getElementById("placesImage").src = pic;
+            }
+        </script>
+    </body>
+</html>
