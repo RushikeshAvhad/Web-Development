@@ -1,0 +1,25 @@
+#mainHeadID{
+    font-size: 40px;
+    color: crimson;
+    font-style: italic;
+    background-color: aquamarine;
+    text-align: center;
+}
+.firstParaClass{
+    text-align: center;
+    font-size: 25px;
+    color: blueviolet;
+    font-style: italic;
+}
+.headClass{
+    font-style: italic;
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+}
+#paraID{
+    font-style: italic;
+    font-size: 20px;
+    color: brown;
+    text-align: center;
+}
