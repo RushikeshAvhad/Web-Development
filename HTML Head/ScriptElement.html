@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>script element</title>
+        <script>
+            function fun(){
+                var x = document.getElementById("p");
+                x.style.color="green";
+                x.innerHTML = "The color and text has changed";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML script element</h1>
+        <p>HTML <strong>script</strong> element is used to apply client side JavaScript for the 
+            same page or to add an external JavaScript file to current page.
+        </p>
+        <br>
+        <h2>Script within Head element</h2>
+        <p id="p">This will change the color and text</p>
+        <button type="button" onclick="fun()">Click me</button>
+    </body>
+</html>
