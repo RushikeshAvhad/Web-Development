@@ -1,0 +1,18 @@
+<!-- Change images according to the browser width -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Image</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Change Images Depending on browser Width</h2>
+        <p>Resize the browser width and the image will change at 600px and 1500px.</p>
+        <picture>
+            <source srcset="https://th.bing.com/th/id/OIP.ANuY_CUH2GeeYigaw1IU8wHaE8?rs=1&pid=ImgDetMain" media="(max-width: 600px)">(Change Image)
+            <source srcset="https://2.bp.blogspot.com/-ngmjXmcrD2k/Uj6AbaKlcOI/AAAAAAAAAaA/fnlfDYl1pQ4/s1600/Image+of+flowers-Red-Abstract-Rose-Hd-Wallpaper-picture-of-flowers.jpg" media="(max-width: 1500px)">(Change Image)
+            <source srcset="https://th.bing.com/th/id/OIP.E3UNwm389l_qdOdJ6zbhCAHaE8?rs=1&pid=ImgDetMain">
+            <img src="https://th.bing.com/th/id/OIP.YEe7jjvj3XtaZgPXX7JJ7QHaE8?rs=1&pid=ImgDetMain" alt="Flowers" style="width: auto;">
+        </picture>
+    </body>
+</html>
