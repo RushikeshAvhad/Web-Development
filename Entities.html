@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entities</title>
+        <style>
+            header{
+                border: 2px solid gray;
+                text-align: center;
+                background-color: bisque;
+                width: 100%;
+            }
+            table{
+                border-color: black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>HTML Entities</h1>
+        </header>
+        <br>
+        <h2>HTML Entities</h2>
+        <p>HTML character entities are used as a replacement of reserved character in HTML.
+            <br>You can also replace characters that are not present on your keyboard by entities.
+            <br>These characters are replaced because some characters are reserved in HTML.
+            <br>HTML entities provide a wide range of character which can allow you to add <strong>icons</strong>, 
+            <br><strong>geometric shapes</strong>, <strong>mathematical operators</strong>, etc.
+            <br><br><strong>For example.</strong>
+            <br>If you use <strong>less than (<)</strong> or <strong>greater than (>)</strong> symbols in your text,
+            <br>the browser can mix them with tags that's why <strong>character entities</strong> are used in HTML to display reserved characters.
+        </p>
+        <h3>How to use an entity:</h3>
+        <p>You can use an entity in your HTML document by name or by a numerical character reference.
+            <br>Each entity starts with symbol ampersand (&) and ends with semicolon (;)
+            <br><br>Syntax:
+            <br><strong>&entity_name;</strong>
+            <br>OR
+            <br><strong>&#entity_number;</strong>
+        </p>
+        <br>
+        <h3>Most used HTML Character Entities</h3>
+        <table border="2">
+            <tr>
+                <th><strong>Result</strong></th>
+                <th><strong>Description</strong></th>
+                <th><strong>Entity Name</strong></th>
+                <th><strong>Entity Number</strong></th>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td>non-breaking space</td>
+                <td>& nbsp;</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>less than</td>
+                <td>& lt;</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>greater than</td>
+                <td>& gt;</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>&#38;</td>
+                <td>ampersand</td>
+                <td>& amp;</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>&#34;</td>
+                <td>double quotation mark</td>
+                <td>& quot;</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>&#39;</td>
+                <td>single quotation mark (apostrophe)</td>
+                <td>& apos;</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>&#162;</td>
+                <td>cent</td>
+                <td>& cent</td>
+                <td>162</td>
+            </tr>
+            <tr>
+                <td>&#163;</td>
+                <td>pound</td>
+                <td>& pound;</td>
+                <td>163</td>
+            </tr>
+            <tr>
+                <td>&yen;</td>
+                <td>yen</td>
+                <td>& yen;</td>
+                <td>165</td>
+            </tr>
+            <tr>
+                <td>&euro;</td>
+                <td>euro</td>
+                <td>& euro;</td>
+                <td>8364</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>copyright</td>
+                <td>& copy;</td>
+                <td>169</td>
+            </tr>
+            <tr>
+                <td>&reg;</td>
+                <td>registerd trademark</td>
+                <td>& reg;</td>
+                <td>174</td>
+            </tr>
+        </table>
+        <br>
+        <p><strong>Note:</strong> Entity names are case sensitive.
+            <br><br>
+            <dl>
+                <dt><strong>Advantages of entity name:</strong></dt>
+                <dd>An entity name is easy to remember.</dd>
+                <dt><strong>Disadvantages of entity name:</strong></dt>
+                <dd>Browsers may not support all entity names, but the support for numbers is good.</dd>
+            </dl>
+        </p>
+        <br>
+        <h3>Diacritical Marks in HTML</h3>
+        <p>There are some special types of letters used in HTML which have some glyph added to the top or below the letters.
+            <br>These glyphs are called diacritical mark.
+            <br>Some diacritical marks, like grave ( )&#768; and acute ( )&#769; are called accents.
+            <br>Diacritical marks can be used both above and below a letter, inside a letter, and between two letters.
+        </p>
+        <h4>Following is a list of some diacritical marks:</h4>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td><strong>Mark</strong></td>
+                    <td><strong>Character</strong></td>
+                    <td><strong>Construct</strong></td>
+                    <td><strong>Result</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp; &#768;</td>
+                    <td>a</td>
+                    <td>a& #768;</td>
+                    <td>a&#768;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#769;</td>
+                    <td>a</td>
+                    <td>a& #769;</td>
+                    <td>a&#769;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#770;</td>
+                    <td>a</td>
+                    <td>a&# 770;</td>
+                    <td>a&#770;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#771;</td>
+                    <td>a</td>
+                    <td>a& #771;</td>
+                    <td>a&#771;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#768;</td>
+                    <td>O</td>
+                    <td>O& #768;</td>
+                    <td>O&#768;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#769;</td>
+                    <td>O</td>
+                    <td>O& #769;</td>
+                    <td>O&#769;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#770;</td>
+                    <td>O</td>
+                    <td>O& #770;</td>
+                    <td>O&#770;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp; &#771;</td>
+                    <td>O</td>
+                    <td>O& #771;</td>
+                    <td>O&#771;</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
