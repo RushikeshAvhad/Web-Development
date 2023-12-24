@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Object</title>
+        <style>
+            h1{
+                background-color: gray;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Object by object literal</h1>
+        <script>
+            emp = {id:102, name:"Ram", salary:40000}
+            document.write(emp.id + " " + emp.name + " " + emp.salary);
+        </script>
+        <h1>By creating instance of Object</h1>
+        <script>
+            var emp = new Object();
+            emp.id = 101;
+            emp.name = "Lakshman";
+            emp.salary = 50000;
+            document.write(emp.id + " " + emp.name + " " + emp.salary);
+        </script>
+        <h1>By using an Object Constructor</h1>
+        <script>
+            function emp(id, name, salary){
+                this.id = id;
+                this.name = name;
+                this.salary = salary;
+            }
+            e1 = new emp(103, "Bharat", 60000);
+            e2 = new emp(104, "Shatrughna", 70000);
+
+            document.writeln(e1.id + " " + e1.name + " " + e1.salary + "<br>");            
+            document.writeln(e2.id + " " + e2.name + " " + e2.salary);
+        </script>
+        <h1>Defining method in JavaScript Object</h1>
+        <p>We can define method in JavaScript object. But before defining method, we need to add property in the function
+            <br>with same name as method.
+        </p>
+        <script>
+            function emp(id, name, salary){
+                this.id = id;
+                this.name = name;
+                this.salary = salary;
+
+                this.changeSalary = changeSalary;
+                function changeSalary(otherSalary){
+                    this.salary = otherSalary;
+                }
+            }
+            e = new emp(105, "Krushna", "30000");
+            document.write(e.id + " " + e.name + " " + e.salary);
+            e.changeSalary(45000);
+            document.write("<br>" + e.id + " " + e.name + " " + e.salary);
+        </script>
+    </body>
+</html>
