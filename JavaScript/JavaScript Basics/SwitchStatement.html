@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Switch Statement</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">JavaScript Switch</h1>
+        <p>The <Strong>JavaScript switch statement</Strong> is used to execute one code from multiple expressions.
+            <br>It is just like else if statement.
+            <br>But it is convenient than <i>if..else..if</i> because it can be used with numbers, characters etc.
+        </p>
+        <br>
+        <h3>Example of switch statement in using JavaScript</h3>
+        <p>
+            <label for="getNumber">Select number and click on button to check the month.</label>
+            <input type="number" name="getNumber" id="getNumber"> <br> <br>
+            <input type="button" onclick="clickMe()" value="Check Month"> <br> <br>
+            <label id="showMonth"></label>
+        </p>
+        <script>
+            function clickMe(){
+                var inputNumber = document.getElementById("getNumber").value;  // get input from user
+                var result;
+                switch(inputNumber) {
+                    case '1':
+                        result = "January";
+                        break;
+                    case '2':
+                        result = "February";
+                        break;
+                    case '3':
+                        result = "March";
+                        break;
+                    case '4':
+                        result = "April";
+                        break;
+                    case '5':
+                        result = "May";
+                        break;
+                    case '6':
+                        result = "June";
+                        break;
+                    case '7':
+                        result = "Jully";
+                        break;
+                    case '8':
+                        result = "Auguest";
+                        break;
+                    case '9':
+                        result = "September";
+                        break;
+                    case '10':
+                        result = "Octomber";
+                        break;
+                    case '11':
+                        result = "November";
+                        break;
+                    case '12':
+                        result = "December";
+                        break;
+                    default:
+                        result = "Invalid Number! Please enter a number between 1-12.";
+                }
+                document.getElementById("showMonth").innerHTML = result;   // show the result in HTML page
+            }
+        </script>
+    </body>
+</html>
