@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Function Object</title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 40px;
+                font-style: italic;
+                color: brown;
+            }
+            span{
+                color: green;
+            }
+            table{
+                border-collapse: collapse;
+                border: 2px solid gray;
+            }
+            div{
+                border: 2px solid black;
+                border-radius: 10px;
+                padding-left: 10px;
+            }
+            .classOne{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Function Object</h1>
+        <p>In JavaScript, the purpose of <strong>Function constructor</strong> is to create a new function object.
+            <br>It executes the code globally. However, if we call the constructor directly, a function is
+            <br>created dynamically but in an unsecured way.
+            <br><br><strong>Syntax</strong>
+            <br>new Function ([arg1[,arg2[,...argn]],] functionBody)
+            <br><br><strong>Parameter:</strong>
+            <br><strong>arg1, arg2, ... , argn</strong> -It represents the argument used by function.
+            <br><strong>functionBody</strong> -It represents the function definition.
+        </p>
+        <div>
+            <h3>JavaScript Function Methods</h3>
+            <table border="2">
+                <thead>
+                    <tr>
+                        <td><strong>Method</strong></td>
+                        <td><strong>Description</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>apply()</span></td>
+                        <td>It is used to call a function contains this value and a single array of arguments.</td>
+                        </tr>
+                     <tr>
+                        <td><span>bind()</span></td>
+                        <td>It is used to create a new function.</td>
+                    </tr>
+                    <tr>
+                        <td><span>call()</span></td>
+                        <td>It is used to call a function contains this value and an argument list.</td>
+                    </tr>
+                    <tr>
+                        <td><span>toString()</span></td>
+                        <td>It returns the result in a form of a string.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3 class="classOne">JavaScript Function Object Example</h3>
+        <h4>Example 1</h4>
+        <script>
+            var add = new Function("num1", "num2", "return num1 + num2");
+            document.writeln(add(2,5));
+        </script>
+        <h4>Example 2</h4>
+        <script>
+            var pow = new Function("num1", "num2", "return Math.pow(num1, num2)");
+            document.write(pow(2,3));
+        </script>
+    </body>
+</html>
