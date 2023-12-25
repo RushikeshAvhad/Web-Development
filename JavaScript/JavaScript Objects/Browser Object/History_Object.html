@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript History Object</title>
+    </head>
+    <body>
+        <h1>JavaScript History Object</h1>
+        <p>The <strong>JavaScript history object</strong> represents an array of URLs visited by the user.
+            <br>By using this object, you can load previous, forword or any particular page.
+            <br>The history object is the window property, so it can be access by:
+            <br><strong>window.history</strong>
+            <br>OR,
+            <br><strong>history</strong>
+        </p>
+        <h3>Property of JavaScript History Object</h3>
+        <p>There are only 1 property of history object.</p>
+        <dl>
+            <dt><strong>length</strong></dt>
+            <dd>- returns the length of the history URLs.</dd>
+        </dl>
+        <hr />
+        <h3>Methods of JavaScript history object</h3>
+        <p>There are only 3 methods of history object.
+            <ol>
+                <li><strong>forward()</strong> - loads the next page.</li>
+                <li><strong>back()</strong> - loads the previous page.</li>
+                <li><strong>go()</strong> - loads the given page number.</li>
+            </ol>
+        </p>
+
+        <h3>Example of history object</h3>
+        <input type="button" value="back" onclick="back()">
+        <script>
+            function back(){
+                history.back(); // for previous page.
+            }
+        </script>
+
+        <input type="button" value="forward" onclick="forward()">
+        <script>
+            function forward(){
+                history.forward(); // for next page.
+            }
+        </script>
+
+        <input type="button" value="go(2)" onclick="go2()">
+        <script type="text/javascript">
+            function go2(){
+                history.go(2); // for next 2nd page
+            }
+        </script>
+
+        <input type="button" value="go(-2)" onclick="gominus2()">
+        <script type="text/javascript">
+            function gominus2(){
+                history.go(-2); // for previous 2nd page
+            }
+        </script>
+    </body>
+</html>
