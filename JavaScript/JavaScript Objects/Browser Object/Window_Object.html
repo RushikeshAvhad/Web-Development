@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Window Object</title>
+    </head>
+    <body>
+        <h1>JavaScript Window Object</h1>
+        <p>The <strong>window object</strong> represents a window in browser.
+            <br>An object of window is created automatically by the browser.
+            <br>Window is the object of browser, <strong>it is not the object of JavaScript.</strong>
+            <br>The JavaScript objects are string, array, date, etc.
+            <strong>Note:</strong> -if html document contains frame or iframe, browser creates additional window objects for each frame.
+        </p>
+        <h3>Methods of window object</h3>
+        <dl>
+            <dt><strong>alert()</strong></dt>
+            <dd>- displays the alert box containing message with ok button.</dd>
+            <dt><strong>confirm()</strong></dt>
+            <dd>- displays the confirm dialog box containing message with ok and cancel button.</dd>
+            <dt><strong>prompt()</strong></dt>
+            <dd>- displays a dialog box to get input from the user.</dd>
+            <dt><strong>open()</strong></dt>
+            <dd>- opens the new window.</dd>
+            <dt><strong>close()</strong></dt>
+            <dd>- close the current window.</dd>
+            <dt><strong>setTimeout()</strong></dt>
+            <dd>- performs action after specified time like calling function, evaluating expressions etc.</dd>
+        </dl>
+
+        <h3>Example of alert()</h3>
+        <input type="button" onclick="alertMsg()" value="alert">
+        <script type="text/javascript">
+            function alertMsg(){
+                alert("This is alert dialog box");
+            }
+        </script>
+
+        <h3>Example of confirm()</h3>
+        <input type="button" value="confirm" onclick="confirmMethod()">
+        <script type="text/javascript">
+            function confirmMethod(){
+                var v = confirm("Are you sure?");
+                if(v == true){
+                    alert("ok");
+                }else{
+                    alert("cancel");
+                }
+            }
+        </script>
+
+        <h3>Example of prompt()</h3>
+        <input type="button" value="prompt" onclick="promptClick()">
+        <script>
+            function promptClick(){
+                var name = prompt("Please enter your name");
+                alert("Your name is " + name);
+            }
+        </script>
+
+        <h3>Example of open()</h3>
+        <input type="button" value="open" onclick="openClick()">
+        <script type="text/javascript">
+            function openClick(){
+                open("https://en.wikipedia.org/wiki/India");
+            }
+        </script>
+
+        <h3>Example of setTimeout()</h3>
+        <input type="button" value="setTimeout" onclick="setTimeoutClick()">
+        <script type="text/javascript">
+            function setTimeoutClick(){
+                setTimeout( function () {
+                    alert("set timeout message");
+                }, 2000);
+            }
+        </script>
+    </body>
+</html>
