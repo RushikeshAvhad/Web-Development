@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigator Object</title>
+    </head>
+    <body>
+        <h1>JavaScript Navigator Object</h1>
+        <p>The <strong>JavaScript Navigator Object</strong> is used for browser detection.
+            <br>It can be used to get browser information such as appName, appCodeName, userAgent etc.
+            <br>The navigator object is the window property, so it can be access by
+            <br><strong>window.navigator</strong> or <strong>navigator</strong>
+        </p>
+        <h3>Property of JavaScript Navigator Object</h3>
+        <p>There are many properties of navigator object that returns information of the browser.
+            <ol>
+                <li><strong>appName</strong> - returns the name</li>
+                <li><strong>appVersion</strong> - returns the version</li>
+                <li><strong>appCodeName</strong> - returns the code name</li>
+                <li><strong>cookieEnabled</strong> - returns true if cookie is enabled otherwise false</li>
+                <li><strong>userAgent</strong> - returns the user agent</li>
+                <li><strong>language</strong> - returns the language. It is supported in Netscape and Firefox only</li>
+                <li><strong>userLanguage</strong> - returns the user language. It is supported in IE only</li>
+                <li><strong>plugins</strong> - returns the plugins. It is supported in Netscape and Firefox only</li>
+                <li><strong>systemLanguage</strong> - returns the system language. It is supported in IE only</li>
+                <li><strong>mimeTypes[]</strong> - returns the array of mime type. It is supported in Netsacpe and Firefox only</li>
+                <li><strong>platform</strong> - returns the platform e.g. Win32</li>
+                <li><strong>online</strong> - returns true if browser is online otherwise false</li>
+            </ol>
+        </p>
+        <h3>Methods of JavaScript navigator object</h3>
+        <ul>
+            <li><strong>javaEnabled()</strong> - checks if java is enabled</li>
+            <li><strong>taintEnabled()</strong> - checks if taint is enabled. It is deprecated since JavaScript 1.2</li>
+        </ul>
+        <h3>Example of Navigator object</h3>
+        <script>
+            document.writeln("<br/> navigator.appCodeName: " + navigator.appCodeName);
+            document.writeln("<br/> navigator.appName: " + navigator.appName);
+            document.writeln("<br/> navigator.appVersion: " + navigator.appVersion);
+            document.writeln("<br/> navigator.cookieEnabled: " + navigator.cookieEnabled);
+            document.writeln("<br/> navigator.language: " + navigator.language);
+            document.writeln("<br/> navigator.userAgent: " + navigator.userAgent);
+            document.writeln("<br/> navigator.Platform: " + navigator.platform);
+            document.writeln("<br/> navigator.onLine: " + navigator.onLine);
+        </script>
+    </body>
+</html>
