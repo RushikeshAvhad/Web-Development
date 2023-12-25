@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object</title>
+    </head>
+    <body>
+        <h1>Document Object Model</h1>
+        <p>The <strong>document object</strong> reprsents the whole html document.
+            <br>When html document is loaded in the browser, it becomes a document object.
+            <br>It is the <strong>root element</strong> that represents the html document.
+            <br>It has properties and methods.
+            <br>By the help of document object, we can add dynamic content to our web page.
+            <br>It is the object of window. so, <strong>window.document</strong> is same as <strong>document</strong> <br>
+            <br>According to W3C - <i>"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows
+                <br>programs and scripts to dynamically access and update the content, structure, and style of a document."
+            </i>
+        </p>
+        <h3>Accessing field value by document object</h3>
+        <form name="form1">
+            Enter Name: <input type="text" name="inputTextName" />
+            <input type="button" onclick="printValue()" value="print name" />
+        </form>
+
+        <script type="text/javascript">
+            function printValue() {
+                var name2 = document.form1.inputTextName.value;
+                alert("Welcome: " + name2);
+            }
+        </script>
+    </body>
+</html>
