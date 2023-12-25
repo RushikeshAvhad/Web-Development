@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Array</title>
+    </head>
+    <body>
+        <h1>JavaScript Array</h1>
+        <p><strong>JavaScript Array</strong> is an object that represents a collection of similar type of elements.
+            <br>There are 3 ways to construct array in JavaScript
+            <ol>
+                <li>By array literal</li>
+                <li>By creating instance of array directly (using new keyword)</li>
+                <li>By using an array constructor (using new keyword)</li>
+            </ol>
+        </p>
+        <h3>JavaScript array literal - Simple example of creating and using array in JavaScript</h3>
+        <script>
+            var emp = ["Virat", "Mahendra", "Rohit"];
+            for(i = 0; i < emp.length; i++){
+                document.write("Employee Name: " + emp[i] + "<br>");
+            }
+        </script>
+        <br>
+        <h3>JavaScript array directly (new keyword)</h3>
+        <script>
+            var i;
+            var emp = new Array(); //creating empty array
+            emp[0] = "John";
+            emp[1] = "Roman";
+            emp[2] = "Seth";
+
+            for(i = 0; i < emp.length; i ++){
+                document.write("Employee Name: " + emp[i] + "<br>");
+            }
+        </script>
+        <br>
+        <h3>JavaScript array constructor (new keyword)</h3>
+        <script>
+            var emps = new Array ("Tony","Steve","Thor"); //array created by passing elements as arguments to the array constructor
+            for(i = 0; i < emp.length; i++){
+                document.write("Employee Name: " + emp[i] + "<br>");
+            }
+        </script>
+    </body>
+</html>
