@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number Validation</title>
+    </head>
+    <body>
+        <h1>JavaScript Number Validation</h1>
+        <p>Let's validate the textfield for numeric value only. Here, we are using isNaN() function.</p>
+        <form name="myform" onsubmit="return validate()">
+            Number: <input type="text" name="num"> <span id="numloc" style="color: red;"></span> <br>
+            <input type="submit" value="Submit">
+        </form>
+        <script type="text/javascript">
+            function validate(){
+                var num = document.myform.num.value;
+                if(isNaN(num)){
+                    document.getElementById("numloc").innerHTML = "Invalid input! Please enter a number.";  //Error message will be shown in red
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
