@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Classes</title>
+    </head>
+    <body>
+        <h1>JavaScript Classes</h1>
+        <p>In JavaScript, classes are the special type of functions. We can define the class just like the function declarations and function expressions.
+            <br>The JavaScript class contains various class members within a body including methods or constructor.
+            <br>The class is executed in strict mode. So, the code containing the silent error or mistake throws an error.
+            <br>The class syntax contains two components:
+            <ul type="circle">
+                <li>Class declarations</li>
+                <li>Class expressions</li>
+            </ul>
+        </p>
+        <h3>Class Declarations</h3>
+        <p>A class can be defined by using a class declaration. A class keyword is used to declare a class with any particular name.
+            <br>According to JavaScript naming conventions, the name of the class always starts with an uppercase letter.
+        </p>
+
+        <h2>Class Declarations Example</h2>
+        <script type="text/javascript">
+            // Declaring class
+            class Employee{
+                // Initializing an object
+                constructor(id, name){
+                    this.id = id;
+                    this.name = name;
+                }
+                // Declaring method
+                detail(){
+                    document.writeln(this.id + " " + this.name + "<br>")
+                }
+            }
+            // Passing object to a variable
+            var e1 = new Employee(101, "Martin Roy");
+            var e2 = new Employee(102, "Duke William");
+            e1.detail(); // Calling method
+            e2.detail();
+        </script>
+    </body>
+</html>
