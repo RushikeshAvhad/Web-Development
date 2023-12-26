@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Encapsulation</title>
+    </head>
+    <body>
+        <h1>JavaScript Encapsulation Example: Validate</h1>
+        <label for="name">Name:</label> <input type="text" id="name"> <br>
+        <label for="marks">Marks</label> <input type="number" id="marks"> <br>
+        <input type="button" value="Validate" onclick="markValidate()">
+        <script type="text/javascript">
+            class Student{
+                constructor(){
+                    var name;
+                    var marks;
+                }
+                getName(){
+                    return this.name;
+                }
+                setName(name){
+                    this.name = name;
+                }
+                getMarks(){
+                    return this.marks;
+                }
+                setMarks(marks){
+                    if(marks < 0 || marks > 100){
+                        alert("Invalid Marks");
+                    }else{
+                        this.marks = marks;
+                    }
+                }
+            }
+
+            function markValidate(){
+                var name = document.getElementById("name").value;
+                var marks = document.getElementById("marks").value;
+                
+                var stud = new Student();
+                stud.setName(name);
+                stud.setMarks(marks);
+                document.writeln(stud.getName() + " " + stud.getMarks());
+            }
+        </script>
+    </body>
+</html>
