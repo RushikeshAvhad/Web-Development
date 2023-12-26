@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>innerHTML</title>
+    </head>
+    <body>
+        <h1>JavaScript - innerHTML</h1>
+        <p>The <strong>innerHTML</strong> property can be used to write the dynamic html on the html document.
+            <br>It is used mostly in the web pages to generate the dynamic html such as registration form, comment form, links, etc.
+        </p>
+        <h3>Example of innerHTML property</h3>
+        <p>In this example we are going to create the html form when user clicks on the button.</p>
+       
+        <form name="myForm">
+            <input type="button" value="comment" onclick="showcommentform()">
+            <div id="mylocation" style="border: 2px solid black;"></div>
+        </form>
+
+        <script type="text/javascript">
+            function showcommentform(){
+                var data = "Name: <input type='text' name='name'> <br> Comment: <br> <textarea rows='5' cols='80'></textarea> <br> <input type='submit' value='Post Comment'>";
+                document.getElementById("mylocation").innerHTML = data;
+            }
+        </script>
+    </body>
+</html>
