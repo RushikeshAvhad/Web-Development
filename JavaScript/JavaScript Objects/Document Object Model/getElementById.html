@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementByID</title>
+    </head>
+    <body>
+        <h1>document.getElementById() Method</h1>
+        <p>The <b>document.getElementById()</b> method returns the element of specified id.</p>
+        <form>
+            <input type="text" id="number" name="number"> <br> <br>
+            <input type="button" value="cube" onclick="getcube()">
+        </form>
+        <script type="text/javascript">
+            function getcube(){
+                var number = document.getElementById("number").value;  // Get input text by ID "number"
+                alert(number * number * number);
+            }
+        </script>
+    </body>
+</html>
