@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Expressions</title>
+    </head>
+    <body>
+        <h1>Class Expressions</h1>
+        <p>Another way to define a class is by using a class expression.
+            <br>Here, it is not mandatory to assign the name of the class.
+            <br>So, the class expression can be named or unnamed.
+            <br>The class expression allows us to fetch the class name.
+            <br>However, this will not be possible with class declaration.
+        </p>
+        <h2>Unnamed Class Expression</h2>
+        <p>The class can be expressed without any name to it.</p>
+        <script type="text/javascript">
+            var emp = class{
+                constructor(id, name){
+                    this.id = id;
+                    this.name = name;
+                }
+            };
+            document.writeln(emp.name)
+        </script>
+    </body>
+</html>
