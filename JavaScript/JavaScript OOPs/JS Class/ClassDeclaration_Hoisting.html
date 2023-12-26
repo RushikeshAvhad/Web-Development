@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Class</title>
+    </head>
+    <body>
+        <h1>Class Declarations Example: Hoisting</h1>
+        <p>Unlike function declaration, the class declaration is not a part of JavaScript hoisting.
+            <br>So, it is required to declare the class before invoking it.
+        </p>
+        <script type="text/javascript">
+            // Here, we are invoking the class before declaring it.
+            var e1 = new Employee(101, "Martin Roy");
+            var e2 = new Employee(102, "Duke William");
+            e1.detail(); // Calling Method
+            e2.detail();
+
+            // Declaring Class
+            class Employee{
+                constructor(id, name){
+                    this.id = id;
+                    this.name = name;
+                }
+                detail(){
+                    document.writeln(this.id + " " + this.name + "<br>");
+                }
+            }
+        </script>
+    </body>
+</html>
