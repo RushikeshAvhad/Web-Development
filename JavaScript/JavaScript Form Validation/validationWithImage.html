@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>validation with image</title>
+    </head>
+    <body>
+        <h1>JavaScript Validation With Image</h1>
+        <p>Let's see an interactive JavaScript form validation example that displays correct and incorrect image if input is correct or incorrect.</p>
+        <form action="#" name="f1" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>Enter Name:</td>
+                    <td><input type="text" name="name"></td>
+                    <span id="nameloc"></span>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input type="password" name="password"></td>
+                    <span id="passwordloc"></span>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="register"></td>
+                </tr>
+            </table>
+        </form>
+        <script type="text/javascript">
+            function validate(){
+                var name = document.f1.name.value;
+                var password = document.f1.password.value;
+                var status = false;
+
+                if(name.length < 1){
+                    document.getElementById("nameloc").innerHTML = "<img style='width: 50px; height: 50px;' src='https://media3.giphy.com/media/U06kKKyav4dIzH1rIe/giphy.gif?cid=790b76111c44a144b21e5f9bf0ef18837be2240d4c4cdce8&rid=giphy.gif&ct=s'/> Please enter your name";
+                    status = false;
+                }else{
+                    document.getElementById("nameloc").innerHTML = "<img style='width: 50px; height: 50px;' src='https://c.tenor.com/0AVbKGY_MxMAAAAC/check-mark-verified.gif'/>";
+                    status = true;
+                }
+
+                if(password.length < 6){
+                    document.getElementById("passwordloc").innerHTML = "<img style='width: 50px; height: 50px;' src='https://media3.giphy.com/media/U06kKKyav4dIzH1rIe/giphy.gif?cid=790b76111c44a144b21e5f9bf0ef18837be2240d4c4cdce8&rid=giphy.gif&ct=s'/> Password must be at least 6 characters long.";
+                    status = false;
+                }else{
+                    document.getElementById("passwordloc").innerHTML = "<img style='width: 50px; height: 50px;' src='https://c.tenor.com/0AVbKGY_MxMAAAAC/check-mark-verified.gif'/>";
+                    status = true;
+                }
+                return status;
+            }
+        </script>
+    </body>
+</html>
