@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Named Class</title>
+    </head>
+    <body>
+        <h1>Named Class Expression Example</h1>
+        <p>We can express the class with the particular name.
+            <br>Here, the scope of the class name is up to the class body.
+            <br>The class is retrived using class.name property.
+        </p>
+        <script type="text/javascript">
+            var emp = class Employee{
+                constructor(id, name){
+                    this.id = id;
+                    this.name = name;
+                }
+            };
+            document.writeln(emp.name);
+            /* document.writeln(Employee.name);
+                Error Occurs on console:
+                "ReferenceError: Employee is not defined
+            */
+        </script>
+    </body>
+</html>
