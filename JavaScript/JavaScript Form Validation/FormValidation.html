@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <h1>JavaScript Form Validation</h1>
+        <p>It is important to validate the form submitted by the user because it can be have inappropriate values.
+            <br>so, validation is must to authenticate user.
+            <br>JavaScript provides facility to validate the form on the client-side so data processing will be faster than server-side validation.
+            <br>Through JavaScript, we can validate name, password, email, date, mobile numbers and more fields.
+        </p>
+        <h3>JavaScript Form Validation Example</h3>
+        <p>In this example, we are going to validate the name and password.
+            <br>the name can't be empty and password can't be less than 6 characters long.
+        </p>
+        <p>Here, we are validating the form on form submit. The user will not be forwarded to the next page until given values are correct.</p>
+
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+            Name: <input type="text" name="name"> <br>
+            Password: <input type="password" name="password"> <br>
+            <input type="submit" value="register">
+        </form>
+        <script>
+            function validateform(){
+                var name = document.forms["myform"]["name"].value;
+                var password = document.myform.password.value;
+
+                if(name == null || name == ""){
+                    alert("Name cannot be blank");
+                    return false;
+                }else if(password.length < 6){
+                    alert("Password should be at least 6 characters long.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
