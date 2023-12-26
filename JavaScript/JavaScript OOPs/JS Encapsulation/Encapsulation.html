@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Encapsulation</title>
+    </head>
+    <body>
+        <h1>JavaScript Encapsulation</h1>
+        <p>The JavaScript <strong>Encapsulation</strong> is a process of binding the data (i.e. variables) with the functions acting on that data.
+            <br>It allows us to control the data and validate it.
+            <br>To achieve an encapsulation in JavaScript :-
+            <ul type="circle">
+                <li>Use var keyword to make data members private.</li>
+                <li>Use setter methods to set the data and getter methods to get that data.</li>
+            </ul>
+            The encapsulation allows us to handle an object using the following properties:
+            <dl>
+                <dt><strong>Read/Write</strong></dt>
+                <dd>Here, we use setter methods to write the data and getter methods read that data.</dd>
+                <dt><strong>Read Only</strong></dt>
+                <dd>In this case, we use getter methods only.</dd>
+                <dt><strong>Write Only</strong></dt>
+                <dd>In this case, we use setter methods only.</dd>
+            </dl>
+        </p>
+        <h3>JavaScript Encapsulation Example</h3>
+        <p>Let's see a simple example of encapsulation that contains two data members with its setter and getter methods.</p>
+        <script type="text/javascript">
+            class Student{
+                constructor(){
+                    var name;
+                    var marks;
+                }
+                getName(){
+                    return this.name;
+                }
+                setName(name){
+                    this.name = name;
+                }
+                getMarks(){
+                    return this.marks;
+                }
+                setMarks(marks){
+                    this.marks = marks;
+                }
+            }
+            var stud = new Student();
+            stud.setName("John");
+            stud.setMarks(80);
+            document.writeln(stud.getName() + " " + stud.getMarks());
+        </script>
+    </body>
+</html>
